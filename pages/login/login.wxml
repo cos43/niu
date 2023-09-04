@@ -1,0 +1,20 @@
+<view style="padding-top: 100px;">
+  <form catchsubmit="formSubmit">
+    <view class="cu-form-group margin-top">
+      <view class="title">手机</view>
+      <input name="phone" placeholder="手机号码"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">密码</view>
+      <input name="password" type="password" placeholder="密码"></input>
+    </view>
+    <!-- <view class="cu-form-group">
+      <view class="title">验证码</view>
+      <input placeholder="输入框带个按钮"></input>
+      <button style="width: 30%;" class="cu-btn bg-green shadow">验证码</button>
+    </view> -->
+    <view class="flex justify-center " style="margin-top: 20px;">
+      <button formType="submit" class="cu-btn bg-blue lg">登录</button>
+    </view>
+  </form>
+</view>

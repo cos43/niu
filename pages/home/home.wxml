@@ -1,0 +1,5 @@
+<view>
+  <view wx:for="{{orderList}}">
+    <view>{{item.orderName}}</view>
+  </view>
+</view>

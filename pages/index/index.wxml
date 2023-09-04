@@ -1,0 +1,46 @@
+<view class="header"></view>
+<view class="car-info">
+  {{currentDevice&&currentDevice.scooter_name}}
+  {{currentDevice&&currentDevice.sku_name}}
+  <image class="shadow-image" src="https://img.niucache.com/tsp/2023/07/f574405927d984d511931232ea1723c1.png"/>
+</view>
+<view class="battery-info flex justify-between align-center">
+  <view class="mileage-container">
+    <span class="mileage">{{deviceDetail?deviceDetail.mileage:'N?A'}}</span>
+    <span class="unit">km</span>
+  </view>
+  <view class="battery-display radius ">
+    电池：
+    {{deviceDetail.battery}}%
+  </view>
+
+</view>
+
+<view class="car-card shadow-warp  shadow-lg">
+  <view class="flex padding justify-center">
+    <image class="car-image" mode="aspectFit" src="{{deviceDetail.index_scooter_img}}">
+    </image>
+  </view>
+  <view class="btns justify-center flex ">
+
+    <movable-area class="area" scale-area>
+      <movable-view bindchange="onTap" bindtouchend="touchEnd" direction="horizontal" class="view" friction="5" damping="70" x="{{x}}">
+        关闭
+      </movable-view>
+    </movable-area>
+
+  </view>
+
+</view>
+<view class="flex trace-card">
+  <view style="margin: 10px" class="text-grey">
+    从上次充电至<strong>{{lastMax}}%</strong>，目前{{deviceDetail.battery}}%，一共跑了 {{lastMile}}km
+  </view>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+
+</view>
+
+
+<view class="flex justify-center">
+  <button bind:tap="logout" class="cu-btn bg-red margin-tb-sm lg">退出</button>
+</view>

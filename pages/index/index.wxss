@@ -1,0 +1,174 @@
+page {
+  background-color: transparent;
+  background: linear-gradient(#56595C, #7A7E81);
+}
+
+.battery-info {
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.battery-display {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #373C40;
+  background-color: rgba(123, 222, 11, 0.6);
+  padding: 15px 25px;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+}
+
+
+
+
+.battery-text {
+  color: white;
+}
+.shadow-image{
+  width: 250px;
+  height: 250px;
+  top: -90px;
+  right: -30px;
+  opacity: 0.3;
+  position:absolute;
+}
+.car-info {
+  width: 94%;
+  margin: auto;
+  margin-top: 70px;
+  position: relative;
+  font-family: 'Impact', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: white;
+}
+
+.mileage {
+  font-family: 'Digital', monospace;
+  /* 数字字体，模拟仪表盘 */
+  font-size: 64px;
+  /* 大字体显示里程 */
+  font-weight: bold;
+  color: white;
+}
+
+.unit {
+  margin-left: 5px;
+  font-family: 'Arial', sans-serif;
+  /* 常规字体 */
+  color: #888888;
+  /* 灰色，以区分数字 */
+  font-size: 24px;
+  /* 小一些的字体大小 */
+  vertical-align: super;
+  /* 上标效果 */
+}
+
+.car-card {
+  width: 94%;
+  margin: auto;
+  position: relative;
+  margin-top: 120px;
+  background-color: white;
+  border-radius: 20px;
+  height: 140px;
+}
+
+.trace-card {
+  width: 94%;
+  margin: auto;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.car-image {
+  position: absolute;
+  top: -160px;
+  width: 120%;
+}
+
+.btns {
+  margin-top: 30px;
+}
+
+#mychart-dom-bar {
+  width: 100%;
+  height: 200px !important;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: left .4s;
+}
+
+.slider.on {
+  background-color: #2196F3;
+}
+
+.slider.on:before {
+  left: 30px;
+}
+
+.slider.dragging:before {
+  transition: none;
+}
+
+.slider:before {
+  left: var(--drag-x, 4px);
+}
+
+.area {
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+  background: #ececf0;
+  border-radius: 30px;
+}
+
+.view {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #34384b;
+  font-family: 'Arial', sans-serif;
+  /* 常规字体 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
